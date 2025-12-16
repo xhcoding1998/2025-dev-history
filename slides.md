@@ -81,8 +81,8 @@ mdc: true
   </div>
   <div class="border-t-4 border-[#00A896] pt-4 bg-gray-50 p-4 rounded-b-lg">
     <div class="text-3xl font-bold text-[#00A896]">06</div>
-    <div class="text-lg mt-2 text-gray-800 font-semibold">后续工作展望</div>
-    <div class="text-sm text-gray-500 mt-1">2026 规划方向</div>
+    <div class="text-lg mt-2 text-gray-800 font-semibold">工作展望</div>
+    <div class="text-sm text-gray-500 mt-1">年度工作方向展望</div>
   </div>
 </div>
 
@@ -588,7 +588,7 @@ mdc: true
 <div class="flex items-center gap-4 mb-6">
   <div class="w-2 h-8 bg-[#00A896]"></div>
   <div class="text-3xl font-bold text-gray-800">六、工作展望</div>
-  <div class="text-sm text-gray-400 ml-2">2025 方向展望</div>
+  <div class="text-sm text-gray-400 ml-2">年度工作方向展望</div>
 </div>
 
 <div class="grid grid-cols-3 gap-6">
