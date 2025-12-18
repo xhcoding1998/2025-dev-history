@@ -9,6 +9,9 @@ drawings:
   persist: false
 transition: slide-left
 mdc: true
+# 导航控制
+selectable: true
+contextMenu: true
 ---
 
 <style>
@@ -17,404 +20,360 @@ mdc: true
 }
 </style>
 
+<style>
+/* 暗色模式适配 - 全局样式 */
+:root.dark .slidev-layout {
+  --text-primary: #f3f4f6;
+  --text-secondary: #d1d5db;
+  --text-muted: #9ca3af;
+  --bg-card: #374151;
+  --bg-secondary: #1f2937;
+  --border-color: #4b5563;
+  --theme-green: #00C8B6;
+}
+
+html.dark .text-gray-800,
+.dark .text-gray-800 {
+  color: #f3f4f6 !important;
+}
+
+html.dark .text-gray-700,
+.dark .text-gray-700 {
+  color: #e5e7eb !important;
+}
+
+html.dark .text-gray-600,
+.dark .text-gray-600 {
+  color: #d1d5db !important;
+}
+
+html.dark .text-gray-500,
+.dark .text-gray-500 {
+  color: #9ca3af !important;
+}
+
+html.dark .text-gray-400,
+.dark .text-gray-400 {
+  color: #6b7280 !important;
+}
+
+html.dark .bg-gray-50,
+.dark .bg-gray-50 {
+  background-color: #374151 !important;
+}
+
+html.dark .bg-white,
+.dark .bg-white {
+  background-color: #1f2937 !important;
+}
+
+html.dark .border-gray-200,
+.dark .border-gray-200 {
+  border-color: #4b5563 !important;
+}
+
+html.dark .border-2,
+.dark .border-2 {
+  border-color: #4b5563;
+}
+
+html.dark [class*="border-[#00A896]"],
+.dark [class*="border-[#00A896]"] {
+  border-color: #00C8B6 !important;
+}
+
+html.dark [class*="text-[#00A896]"],
+.dark [class*="text-[#00A896]"] {
+  color: #00C8B6 !important;
+}
+
+html.dark [class*="bg-[#00A896]"],
+.dark [class*="bg-[#00A896]"] {
+  background-color: rgba(0, 200, 182, 0.2) !important;
+}
+
+html.dark .border-t-4,
+.dark .border-t-4 {
+  border-top-color: #00C8B6 !important;
+}
+
+html.dark .border-l-4,
+.dark .border-l-4 {
+  border-left-color: #00C8B6 !important;
+}
+
+html.dark .border-l-3,
+.dark .border-l-3 {
+  border-left-color: #00C8B6 !important;
+}
+
+html.dark .rounded-full[class*="border"],
+.dark .rounded-full[class*="border"] {
+  border-color: #00C8B6 !important;
+  background-color: #1f2937 !important;
+}
+
+html.dark .p-2.bg-white,
+.dark .p-2.bg-white {
+  background-color: #374151 !important;
+}
+</style>
+
 <div class="h-full flex flex-col justify-center items-center">
-  <div class="text-5xl font-bold text-[#00A896]">2025 年度绩效考核</div>
-  <div class="text-2xl mt-2 text-gray-500">年终述职总结</div>
+  <div class="text-5xl font-bold text-[#00A896]">2025 年度绩效考核总结</div>
   <div class="text-3xl mt-8 text-gray-600">前端开发工程师</div>
   <div class="text-4xl mt-2 font-bold text-gray-800">谢辉</div>
-
-  <div class="mt-12 grid grid-cols-5 gap-4 text-sm">
-    <div class="px-4 py-3 border-2 border-[#00A896] rounded-lg text-center">
-      <div class="text-[#00A896] text-lg">💳</div>
-      <div class="text-gray-600 mt-1">业务开发</div>
-    </div>
-    <div class="px-4 py-3 border-2 border-[#00A896] rounded-lg text-center">
-      <div class="text-[#00A896] text-lg">🛒</div>
-      <div class="text-gray-600 mt-1">收银台迭代</div>
-    </div>
-    <div class="px-4 py-3 border-2 border-[#00A896] rounded-lg text-center">
-      <div class="text-[#00A896] text-lg">🤖</div>
-      <div class="text-gray-600 mt-1">AI站点支撑</div>
-    </div>
-    <div class="px-4 py-3 border-2 border-[#00A896] rounded-lg text-center">
-      <div class="text-[#00A896] text-lg">🌍</div>
-      <div class="text-gray-600 mt-1">海外站点支撑</div>
-    </div>
-    <div class="px-4 py-3 border-2 border-[#00A896] rounded-lg text-center">
-      <div class="text-[#00A896] text-lg">⚙️</div>
-      <div class="text-gray-600 mt-1">管理后台维护</div>
-    </div>
-  </div>
-
-  <div class="mt-12 text-gray-400">2025.12</div>
+  <div class="mt-6 text-gray-400">2025.12.18</div>
 </div>
 
 ---
 
-# 目录
-
-<div class="mt-8 grid grid-cols-3 gap-6">
-  <div class="border-t-4 border-[#00A896] pt-4 bg-gray-50 p-4 rounded-b-lg">
-    <div class="text-3xl font-bold text-[#00A896]">01</div>
-    <div class="text-lg mt-2 text-gray-800 font-semibold">年度工作总体概述</div>
-    <div class="text-sm text-gray-500 mt-1">全年主线说明</div>
-  </div>
-  <div class="border-t-4 border-[#00A896] pt-4 bg-gray-50 p-4 rounded-b-lg">
-    <div class="text-3xl font-bold text-[#00A896]">02</div>
-    <div class="text-lg mt-2 text-gray-800 font-semibold">核心成果概览</div>
-    <div class="text-sm text-gray-500 mt-1">结果导向数据</div>
-  </div>
-  <div class="border-t-4 border-[#00A896] pt-4 bg-gray-50 p-4 rounded-b-lg">
-    <div class="text-3xl font-bold text-[#00A896]">03</div>
-    <div class="text-lg mt-2 text-gray-800 font-semibold">工作内容详细拆解</div>
-    <div class="text-sm text-gray-500 mt-1">五大核心模块</div>
-  </div>
-  <div class="border-t-4 border-[#00A896] pt-4 bg-gray-50 p-4 rounded-b-lg">
-    <div class="text-3xl font-bold text-[#00A896]">04</div>
-    <div class="text-lg mt-2 text-gray-800 font-semibold">能力体现与岗位价值</div>
-    <div class="text-sm text-gray-500 mt-1">技术·业务·协作</div>
-  </div>
-  <div class="border-t-4 border-[#00A896] pt-4 bg-gray-50 p-4 rounded-b-lg">
-    <div class="text-3xl font-bold text-[#00A896]">05</div>
-    <div class="text-lg mt-2 text-gray-800 font-semibold">年度自我评价</div>
-    <div class="text-sm text-gray-500 mt-1">绩效总结</div>
-  </div>
-  <div class="border-t-4 border-[#00A896] pt-4 bg-gray-50 p-4 rounded-b-lg">
-    <div class="text-3xl font-bold text-[#00A896]">06</div>
-    <div class="text-lg mt-2 text-gray-800 font-semibold">工作展望</div>
-    <div class="text-sm text-gray-500 mt-1">年度工作方向展望</div>
+<div class="h-full flex flex-col justify-center -mt-4">
+  <div class="text-3xl font-bold text-gray-800 mb-6 text-center">目录</div>
+  <div class="grid grid-cols-4 gap-6 px-2 items-stretch">
+    <div class="border-t-4 border-[#00A896] bg-gray-50 p-5 rounded-b-xl shadow-sm hover:shadow-md transition-shadow flex flex-col">
+      <div class="text-5xl font-bold text-[#00A896]">A</div>
+      <div class="text-xl mt-2 text-gray-800 font-semibold">业绩回顾</div>
+      <div class="text-sm text-gray-500 mt-1">年度工作成果与产出</div>
+      <div class="mt-4 space-y-1 text-sm text-gray-400">
+        <div>• 工作概述与核心数据</div>
+        <div>• 支付链路与模板优化</div>
+        <div>• 跨部门协作与海外支持</div>
+        <div>• 统一管理后台建设</div>
+      </div>
+    </div>
+    <div class="border-t-4 border-[#00A896] bg-gray-50 p-5 rounded-b-xl shadow-sm hover:shadow-md transition-shadow flex flex-col">
+      <div class="text-5xl font-bold text-[#00A896]">B</div>
+      <div class="text-xl mt-2 text-gray-800 font-semibold">成长回顾</div>
+      <div class="text-sm text-gray-500 mt-1">能力提升与经验积累</div>
+      <div class="mt-4 space-y-1 text-sm text-gray-400">
+        <div>• 技术能力提升</div>
+        <div>• 业务理解深化</div>
+        <div>• 协作与责任感</div>
+      </div>
+    </div>
+    <div class="border-t-4 border-[#00A896] bg-gray-50 p-5 rounded-b-xl shadow-sm hover:shadow-md transition-shadow flex flex-col">
+      <div class="text-5xl font-bold text-[#00A896]">C</div>
+      <div class="text-xl mt-2 text-gray-800 font-semibold">感受与建议</div>
+      <div class="text-sm text-gray-500 mt-1">工作感悟与思考</div>
+      <div class="mt-4 space-y-1 text-sm text-gray-400">
+        <div>• 年度工作感悟</div>
+        <div>• 挑战与收获</div>
+        <div>• 改进建议与期望</div>
+      </div>
+    </div>
+    <div class="border-t-4 border-[#00A896] bg-gray-50 p-5 rounded-b-xl shadow-sm hover:shadow-md transition-shadow flex flex-col">
+      <div class="text-5xl font-bold text-[#00A896]">D</div>
+      <div class="text-xl mt-2 text-gray-800 font-semibold">未来规划</div>
+      <div class="text-sm text-gray-500 mt-1">工作展望与目标</div>
+      <div class="mt-4 space-y-1 text-sm text-gray-400">
+        <div>• 业务方向规划</div>
+        <div>• 技术深耕目标</div>
+        <div>• 团队贡献计划</div>
+      </div>
+    </div>
   </div>
 </div>
 
 ---
+layout: section
+---
 
-<div class="flex items-center gap-4 mb-6">
-  <div class="w-2 h-8 bg-[#00A896]"></div>
-  <div class="text-3xl font-bold text-gray-800">一、年度工作总体概述</div>
-  <div class="text-sm text-gray-400 ml-2">全年主线说明</div>
+<div class="text-center">
+  <div class="text-6xl font-bold text-[#00A896] mb-4">A</div>
+  <div class="text-4xl font-bold text-gray-800">业绩回顾</div>
+  <div class="text-xl text-gray-500 mt-4">年度工作成果与产出</div>
 </div>
 
-<div class="p-5 bg-[#00A896]/10 rounded-lg mb-6">
-  <div class="text-gray-700 leading-relaxed">
+---
+
+<div class="flex items-center gap-4 mb-6 mt-4">
+  <div class="px-3 py-1 bg-[#00A896] text-white rounded font-bold">A</div>
+  <div class="text-3xl font-bold text-gray-800">业绩回顾 - 年度工作概述</div>
+</div>
+
+<div class="p-4 bg-[#00A896]/10 rounded-lg mb-10">
+  <div class="text-gray-700 text-sm leading-relaxed">
     2025 年全年，主要承担 <span class="text-[#00A896] font-semibold">支付与收银台相关前端核心模块的建设、优化与稳定性保障工作</span>，同时作为前端侧接口人，长期对接 <span class="text-[#00A896] font-semibold">海外项目部门与 AI 项目部门</span>，支撑多项目并行推进。
   </div>
 </div>
 
-<div class="grid grid-cols-3 gap-4 mb-6">
-  <div class="p-4 border-l-4 border-[#00A896] bg-gray-50">
-    <div class="font-semibold text-gray-800 mb-2">📊 项目特征</div>
-    <div class="text-sm text-gray-600">项目多、并行度高，需求以<span class="text-[#00A896] font-medium">高优先级、收入相关、海外场景</span>为主</div>
+<div class="grid grid-cols-4 gap-3 mb-10">
+  <div class="text-center p-3 border-2 border-[#00A896] rounded-lg">
+    <div class="text-3xl font-bold text-[#00A896]">100+</div>
+    <div class="text-gray-600 text-sm font-medium">Story / 需求</div>
+    <div class="text-xs text-gray-400">全年累计交付</div>
   </div>
-  <div class="p-4 border-l-4 border-[#00A896] bg-gray-50">
-    <div class="font-semibold text-gray-800 mb-2">🔧 工作范围</div>
-    <div class="text-sm text-gray-600">不仅限于页面实现，还包括<span class="text-[#00A896] font-medium">方案评估、风险识别、问题兜底</span></div>
+  <div class="text-center p-3 border-2 border-[#00A896] rounded-lg">
+    <div class="text-3xl font-bold text-[#00A896]">50%+</div>
+    <div class="text-gray-600 text-sm font-medium">High 优先级</div>
+    <div class="text-xs text-gray-400">需求占比</div>
   </div>
-  <div class="p-4 border-l-4 border-[#00A896] bg-gray-50">
-    <div class="font-semibold text-gray-800 mb-2">🎯 优化推进</div>
-    <div class="text-sm text-gray-600">在支付、模板、多语言、后台等模块中<span class="text-[#00A896] font-medium">持续处理历史问题并推进结构性优化</span></div>
+  <div class="text-center p-3 border-2 border-[#00A896] rounded-lg">
+    <div class="text-3xl font-bold text-[#00A896]">30+</div>
+    <div class="text-gray-600 text-sm font-medium">支付方式</div>
+    <div class="text-xs text-gray-400">多国家覆盖</div>
   </div>
-</div>
-
-<div class="p-4 border-2 border-[#00A896] rounded-lg">
-  <div class="flex items-center gap-2 mb-2">
-    <div class="text-[#00A896] text-xl">🎯</div>
-    <div class="font-semibold text-gray-800">整体工作目标</div>
-  </div>
-  <div class="text-gray-700">保障核心支付链路稳定运行 · 提升前端交付效率 · 降低业务风险</div>
-</div>
-
----
-
-<div class="flex items-center gap-4 mb-6">
-  <div class="w-2 h-8 bg-[#00A896]"></div>
-  <div class="text-3xl font-bold text-gray-800">二、核心成果概览</div>
-  <div class="text-sm text-gray-400 ml-2">结果导向</div>
-</div>
-
-<div class="grid grid-cols-4 gap-4 mb-6">
-  <div class="text-center p-5 border-2 border-[#00A896] rounded-lg">
-    <div class="text-4xl font-bold text-[#00A896]">100+</div>
-    <div class="text-gray-600 mt-1 font-medium">Story / 需求</div>
-    <div class="text-xs text-gray-400 mt-1">全年累计交付</div>
-  </div>
-  <div class="text-center p-5 border-2 border-[#00A896] rounded-lg">
-    <div class="text-4xl font-bold text-[#00A896]">50%+</div>
-    <div class="text-gray-600 mt-1 font-medium">High 优先级</div>
-    <div class="text-xs text-gray-400 mt-1">需求占比</div>
-  </div>
-  <div class="text-center p-5 border-2 border-[#00A896] rounded-lg">
-    <div class="text-4xl font-bold text-[#00A896]">10+</div>
-    <div class="text-gray-600 mt-1 font-medium">支付方式</div>
-    <div class="text-xs text-gray-400 mt-1">多国家覆盖</div>
-  </div>
-  <div class="text-center p-5 border-2 border-[#00A896] rounded-lg">
-    <div class="text-4xl font-bold text-[#00A896]">12</div>
-    <div class="text-gray-600 mt-1 font-medium">个月</div>
-    <div class="text-xs text-gray-400 mt-1">稳定交付</div>
+  <div class="text-center p-3 border-2 border-[#00A896] rounded-lg">
+    <div class="text-3xl font-bold text-[#00A896]">12</div>
+    <div class="text-gray-600 text-sm font-medium">个月</div>
+    <div class="text-xs text-gray-400">稳定交付</div>
   </div>
 </div>
 
-<div class="grid grid-cols-2 gap-4">
-  <div class="p-4 bg-gray-50 rounded-lg">
-    <div class="font-semibold text-gray-800 mb-3">📌 持续参与关键需求</div>
-    <div class="space-y-2 text-sm">
-      <div class="flex items-center gap-2 text-gray-600">
-        <span class="w-2 h-2 rounded-full bg-[#00A896]"></span>
-        <span>收入链路核心功能建设</span>
-      </div>
-      <div class="flex items-center gap-2 text-gray-600">
-        <span class="w-2 h-2 rounded-full bg-[#00A896]"></span>
-        <span>支付稳定性保障与异常修复</span>
-      </div>
-      <div class="flex items-center gap-2 text-gray-600">
-        <span class="w-2 h-2 rounded-full bg-[#00A896]"></span>
-        <span>海外合规相关关键需求</span>
-      </div>
-    </div>
+<div class="grid grid-cols-3 gap-3">
+  <div class="p-3 border-l-4 border-[#00A896] bg-gray-50">
+    <div class="font-semibold text-gray-800 text-sm mb-1">项目特征</div>
+    <div class="text-xs text-gray-600">项目多、并行度高，以<span class="text-[#00A896]">高优先级、收入相关</span>为主</div>
   </div>
-  <div class="p-4 bg-gray-50 rounded-lg">
-    <div class="font-semibold text-gray-800 mb-3">📌 工作模块覆盖</div>
-    <div class="space-y-2 text-sm">
-      <div class="flex items-center gap-2 text-gray-600">
-        <span class="w-2 h-2 rounded-full bg-[#00A896]"></span>
-        <span>支付与收银台核心链路</span>
-      </div>
-      <div class="flex items-center gap-2 text-gray-600">
-        <span class="w-2 h-2 rounded-full bg-[#00A896]"></span>
-        <span>海外站点与多语言支持</span>
-      </div>
-      <div class="flex items-center gap-2 text-gray-600">
-        <span class="w-2 h-2 rounded-full bg-[#00A896]"></span>
-        <span>统一管理后台平台能力</span>
-      </div>
-    </div>
+  <div class="p-3 border-l-4 border-[#00A896] bg-gray-50">
+    <div class="font-semibold text-gray-800 text-sm mb-1">工作范围</div>
+    <div class="text-xs text-gray-600">页面实现 + <span class="text-[#00A896]">方案评估、风险识别、问题兜底</span></div>
+  </div>
+  <div class="p-3 border-l-4 border-[#00A896] bg-gray-50">
+    <div class="font-semibold text-gray-800 text-sm mb-1">整体目标</div>
+    <div class="text-xs text-gray-600">保障核心<span class="text-[#00A896]">支付链路稳定运行</span>，降低业务风险</div>
   </div>
 </div>
 
 ---
 
-<div class="flex items-center gap-4 mb-4">
-  <div class="w-2 h-8 bg-[#00A896]"></div>
-  <div class="text-3xl font-bold text-gray-800">三、工作内容详细拆解</div>
+<div class="flex items-center gap-4 mb-6 mt-4">
+  <div class="px-3 py-1 bg-[#00A896] text-white rounded font-bold">A</div>
+  <div class="text-3xl font-bold text-gray-800">业绩回顾 - 支付链路与模板优化</div>
 </div>
 
-<div class="text-lg text-[#00A896] font-semibold mb-3">1. 支付与收银台核心链路建设 <span class="text-sm text-gray-400 font-normal">（全年持续投入 · 核心收入链路）</span></div>
-
-<div class="grid grid-cols-2 gap-6">
+<div class="grid grid-cols-2 gap-5">
   <div>
-    <div class="p-4 bg-gray-50 rounded-lg mb-4">
-      <div class="font-semibold text-gray-800 mb-3">💳 支付方式接入与调整</div>
-      <div class="grid grid-cols-2 gap-2 text-sm text-gray-600">
-        <div class="flex items-center gap-1"><span class="text-[#00A896]">✓</span> PayPal</div>
-        <div class="flex items-center gap-1"><span class="text-[#00A896]">✓</span> Apple Pay</div>
-        <div class="flex items-center gap-1"><span class="text-[#00A896]">✓</span> Adyen</div>
-        <div class="flex items-center gap-1"><span class="text-[#00A896]">✓</span> ACDC</div>
-        <div class="flex items-center gap-1"><span class="text-[#00A896]">✓</span> GCASH</div>
-        <div class="flex items-center gap-1"><span class="text-[#00A896]">✓</span> AP 直连</div>
+    <div class="p-4 bg-[#00A896]/10 rounded-lg mb-3">
+      <div class="font-semibold text-gray-800 mb-2">支付渠道接入</div>
+      <div class="flex flex-wrap gap-2 text-xs">
+        <span class="px-2 py-1 bg-white rounded border border-[#00A896] text-gray-600">Adyen</span>
+        <span class="px-2 py-1 bg-white rounded border border-[#00A896] text-gray-600">云汇</span>
+        <span class="px-2 py-1 bg-white rounded border border-[#00A896] text-gray-600">ACDC</span>
+        <span class="px-2 py-1 bg-white rounded border border-[#00A896] text-gray-600">FastSpring</span>
+        <span class="px-2 py-1 bg-white rounded border border-[#00A896] text-gray-600">GP/AP直连</span>
+        <span class="px-2 py-1 bg-white rounded border border-[#00A896] text-gray-600">DANA</span>
+        <span class="px-2 py-1 bg-white rounded border border-[#00A896] text-gray-600">GrabPay</span>
+        <span class="px-2 py-1 bg-white rounded border border-[#00A896] text-gray-600">GCash</span>
+        <span class="px-2 py-1 bg-white rounded border border-[#00A896] text-gray-600">Pix</span>
       </div>
     </div>
-    <div class="p-4 bg-gray-50 rounded-lg">
-      <div class="font-semibold text-gray-800 mb-3">🌍 海外本地化支付</div>
-      <div class="grid grid-cols-2 gap-2 text-sm text-gray-600">
-        <div class="flex items-center gap-1"><span class="text-[#00A896]">✓</span> SEPA</div>
-        <div class="flex items-center gap-1"><span class="text-[#00A896]">✓</span> GrabPay</div>
-        <div class="flex items-center gap-1"><span class="text-[#00A896]">✓</span> Cash App Pay</div>
-        <div class="flex items-center gap-1"><span class="text-[#00A896]">✓</span> Local Pix</div>
-      </div>
-    </div>
-  </div>
-
-  <div>
-    <div class="p-4 bg-gray-50 rounded-lg mb-4">
-      <div class="font-semibold text-gray-800 mb-3">🔧 流程优化与问题修复</div>
-      <div class="space-y-2 text-sm text-gray-600">
+    <div class="p-4 bg-gray-50 rounded-lg mb-3">
+      <div class="font-semibold text-gray-800 mb-2">流程优化</div>
+      <div class="space-y-1 text-sm text-gray-600">
         <div class="flex items-start gap-2"><span class="text-[#00A896]">✓</span><span>支付流程梳理与异常兜底</span></div>
         <div class="flex items-start gap-2"><span class="text-[#00A896]">✓</span><span>修复失败回跳、状态异常等问题</span></div>
-        <div class="flex items-start gap-2"><span class="text-[#00A896]">✓</span><span>iframe、跳转链路与回调逻辑优化</span></div>
-        <div class="flex items-start gap-2"><span class="text-[#00A896]">✓</span><span>历史支付问题排查与重构</span></div>
+        <div class="flex items-start gap-2"><span class="text-[#00A896]">✓</span><span>IFRAME、跳转链路与回调逻辑优化</span></div>
       </div>
     </div>
-    <div class="p-4 border-2 border-[#00A896] rounded-lg">
-      <div class="font-semibold text-[#00A896] mb-2">📈 产出效果</div>
+    <div class="p-3 border-2 border-[#00A896] rounded-lg">
+      <div class="font-semibold text-[#00A896] text-sm mb-1">产出效果</div>
+      <div class="text-xs text-gray-600">核心支付流程更稳定，海外支付切换成本降低</div>
+    </div>
+  </div>
+
+  <div>
+    <div class="p-4 bg-gray-50 rounded-lg mb-3">
+      <div class="font-semibold text-gray-800 mb-2">模板体系优化</div>
+      <div class="grid grid-cols-2 gap-2 text-xs text-gray-600">
+        <div class="p-2 bg-white rounded border border-gray-200 text-center">印尼专用过审</div>
+        <div class="p-2 bg-white rounded border border-gray-200 text-center">AI项目AB测</div>
+        <div class="p-2 bg-white rounded border border-gray-200 text-center">匿名短信页面</div>
+        <div class="p-2 bg-white rounded border border-gray-200 text-center">直连/下挂兼容</div>
+        <div class="p-2 bg-white rounded border border-gray-200 text-center">多语言模板区分</div>
+        <div class="p-2 bg-white rounded border border-gray-200 text-center">模板路由表优化</div>
+      </div>
+    </div>
+    <div class="p-4 bg-gray-50 rounded-lg mb-3">
+      <div class="font-semibold text-gray-800 mb-2">视觉统一</div>
       <div class="space-y-1 text-sm text-gray-600">
-        <div>• 核心支付流程更加稳定，可维护性提升</div>
-        <div>• 海外支付方式可并行运行，切换成本降低</div>
-        <div>• 支付问题响应与修复效率明显提升</div>
-      </div>
-    </div>
-  </div>
-</div>
-
----
-
-<div class="flex items-center gap-4 mb-4">
-  <div class="w-2 h-8 bg-[#00A896]"></div>
-  <div class="text-3xl font-bold text-gray-800">三、工作内容详细拆解</div>
-</div>
-
-<div class="text-lg text-[#00A896] font-semibold mb-3">2. 收银台模板与样式系统化优化 <span class="text-sm text-gray-400 font-normal">（结构性治理 · 降低维护成本）</span></div>
-
-<div class="grid grid-cols-2 gap-6">
-  <div>
-    <div class="p-4 bg-[#00A896]/10 rounded-lg mb-4">
-      <div class="text-gray-700 text-sm leading-relaxed">
-        针对历史收银台模板<span class="font-semibold">样式分散、定制化严重</span>的问题，在全年持续推进系统化优化，提升一致性与可维护性。
-      </div>
-    </div>
-    <div class="p-4 bg-gray-50 rounded-lg">
-      <div class="font-semibold text-gray-800 mb-3">📋 模板体系优化</div>
-      <div class="grid grid-cols-2 gap-2 text-sm text-gray-600">
-        <div class="p-2 bg-white rounded border border-gray-200 text-center">印尼专用过审模板</div>
-        <div class="p-2 bg-white rounded border border-gray-200 text-center">AI项目不同AB测模板</div>
-        <div class="p-2 bg-white rounded border border-gray-200 text-center">匿名短信页面/弹窗模板</div>
-        <div class="p-2 bg-white rounded border border-gray-200 text-center">衍生一次性等模板</div>
-        <div class="p-2 bg-white rounded border border-gray-200 text-center">直连/下挂模板</div>
-        <div class="p-2 bg-white rounded border border-gray-200 text-center">兼容全部支付方式模板</div>
-      </div>
-    </div>
-  </div>
-
-  <div>
-    <div class="p-4 bg-gray-50 rounded-lg mb-4">
-      <div class="font-semibold text-gray-800 mb-3">🎨 视觉与结构统一</div>
-      <div class="space-y-2 text-sm text-gray-600">
         <div class="flex items-start gap-2"><span class="text-[#00A896]">✓</span><span>套餐卡片、价格展示、支付按钮统一</span></div>
         <div class="flex items-start gap-2"><span class="text-[#00A896]">✓</span><span>支付 icon 视觉规范化</span></div>
-        <div class="flex items-start gap-2"><span class="text-[#00A896]">✓</span><span>多语言 + 模板组合样式异常修复</span></div>
-        <div class="flex items-start gap-2"><span class="text-[#00A896]">✓</span><span>iframe 场景布局、滚动、交互处理</span></div>
+        <div class="flex items-start gap-2"><span class="text-[#00A896]">✓</span><span>iframe 场景布局与交互处理</span></div>
       </div>
     </div>
-    <div class="p-4 border-2 border-[#00A896] rounded-lg">
-      <div class="font-semibold text-[#00A896] mb-2">📈 产出效果</div>
-      <div class="space-y-1 text-sm text-gray-600">
-        <div>• 模板结构更清晰，新增需求改动范围可控</div>
-        <div>• 样式问题显著减少，回归成本降低</div>
-        <div>• 为后续功能扩展提供稳定的模板基础</div>
-      </div>
+    <div class="p-3 border-2 border-[#00A896] rounded-lg">
+      <div class="font-semibold text-[#00A896] text-sm mb-1">产出效果</div>
+      <div class="text-xs text-gray-600">模板结构清晰，样式问题减少，回归成本降低</div>
     </div>
   </div>
 </div>
 
 ---
 
-<div class="flex items-center gap-4 mb-4">
-  <div class="w-2 h-8 bg-[#00A896]"></div>
-  <div class="text-3xl font-bold text-gray-800">三、工作内容详细拆解</div>
+<div class="flex items-center gap-4 mb-6 mt-4">
+  <div class="px-3 py-1 bg-[#00A896] text-white rounded font-bold">A</div>
+  <div class="text-3xl font-bold text-gray-800">业绩回顾 - 跨部门协作与海外支持</div>
 </div>
 
-<div class="text-lg text-[#00A896] font-semibold mb-3">3. 跨部门协作与项目对接支持 <span class="text-sm text-gray-400 font-normal">（角色型贡献 · 前端侧接口人）</span></div>
-
-<div class="grid grid-cols-2 gap-6">
+<div class="grid grid-cols-2 gap-5">
   <div>
-    <div class="p-4 bg-[#00A896]/10 rounded-lg mb-4">
-      <div class="text-gray-700 text-sm leading-relaxed">
-        在具体功能开发之外，全年持续承担<span class="font-semibold">海外项目部门与 AI 项目部门</span>的前端支付对接工作，作为前端侧跨部门支付接口人与推进者。
+    <div class="p-4 bg-[#00A896]/10 rounded-lg mb-3">
+      <div class="font-semibold text-gray-800 mb-2">跨部门协作</div>
+      <div class="text-sm text-gray-700 mb-2">作为前端支付侧接口人，持续对接多方角色</div>
+      <div class="flex flex-wrap gap-2 text-xs">
+        <span class="px-2 py-1 bg-white rounded-full border border-[#00A896] text-gray-600">产品</span>
+        <span class="px-2 py-1 bg-white rounded-full border border-[#00A896] text-gray-600">后端</span>
+        <span class="px-2 py-1 bg-white rounded-full border border-[#00A896] text-gray-600">测试</span>
+        <span class="px-2 py-1 bg-white rounded-full border border-[#00A896] text-gray-600">支付运营</span>
+        <span class="px-2 py-1 bg-white rounded-full border border-[#00A896] text-gray-600">海外团队</span>
+        <span class="px-2 py-1 bg-white rounded-full border border-[#00A896] text-gray-600">AI团队</span>
+        <span class="px-2 py-1 bg-white rounded-full border border-[#00A896] text-gray-600">渠道方</span>
       </div>
     </div>
     <div class="p-4 bg-gray-50 rounded-lg">
-      <div class="font-semibold text-gray-800 mb-3">🤝 协作对象</div>
-      <div class="flex flex-wrap gap-2 text-sm">
-        <span class="px-3 py-1 bg-white rounded-full border border-[#00A896] text-gray-600">产品</span>
-        <span class="px-3 py-1 bg-white rounded-full border border-[#00A896] text-gray-600">后端</span>
-        <span class="px-3 py-1 bg-white rounded-full border border-[#00A896] text-gray-600">测试</span>
-        <span class="px-3 py-1 bg-white rounded-full border border-[#00A896] text-gray-600">支付运营</span>
-        <span class="px-3 py-1 bg-white rounded-full border border-[#00A896] text-gray-600">海外团队</span>
-        <span class="px-3 py-1 bg-white rounded-full border border-[#00A896] text-gray-600">AI 团队</span>
-        <span class="px-3 py-1 bg-white rounded-full border border-[#00A896] text-gray-600">渠道方</span>
-      </div>
-    </div>
-  </div>
-
-  <div>
-    <div class="p-4 bg-gray-50 rounded-lg mb-4">
-      <div class="font-semibold text-gray-800 mb-3">📋 完成事项</div>
-      <div class="space-y-2 text-sm text-gray-600">
-        <div class="flex items-start gap-2"><span class="text-[#00A896]">✓</span><span>参与跨部门需求评审，澄清需求范围与实现方式</span></div>
-        <div class="flex items-start gap-2"><span class="text-[#00A896]">✓</span><span>从前端角度识别实现风险并提前反馈</span></div>
-        <div class="flex items-start gap-2"><span class="text-[#00A896]">✓</span><span>对接多方角色，推进需求落地</span></div>
-        <div class="flex items-start gap-2"><span class="text-[#00A896]">✓</span><span>多项目并行时，协调优先级并保障交付</span></div>
-      </div>
-    </div>
-    <div class="p-4 border-2 border-[#00A896] rounded-lg">
-      <div class="font-semibold text-[#00A896] mb-2">📈 产出效果</div>
+      <div class="font-semibold text-gray-800 mb-2">协作完成事项</div>
       <div class="space-y-1 text-sm text-gray-600">
-        <div>• 跨团队沟通成本降低</div>
-        <div>• 需求推进更顺畅，返工与理解偏差减少</div>
-        <div>• 前端侧成为稳定、可信赖的交付节点</div>
-      </div>
-    </div>
-  </div>
-</div>
-
----
-
-<div class="flex items-center gap-4 mb-4">
-  <div class="w-2 h-8 bg-[#00A896]"></div>
-  <div class="text-3xl font-bold text-gray-800">三、工作内容详细拆解</div>
-</div>
-
-<div class="text-lg text-[#00A896] font-semibold mb-3">4. 海外站点、多语言与合规支持 <span class="text-sm text-gray-400 font-normal">（高风险场景 · 保障业务稳定）</span></div>
-
-<div class="grid grid-cols-2 gap-6">
-  <div>
-    <div class="p-4 bg-[#00A896]/10 rounded-lg mb-4">
-      <div class="text-gray-700 text-sm leading-relaxed">
-        全年多次参与海外站点相关需求，场景复杂、风险较高，对前端细节要求严格。目标是<span class="font-semibold">保障海外业务稳定运行，降低合规风险</span>。
-      </div>
-    </div>
-    <div class="p-4 bg-gray-50 rounded-lg">
-      <div class="font-semibold text-gray-800 mb-3">🌐 多语言支持</div>
-      <div class="grid grid-cols-2 gap-2 text-sm">
-        <div class="p-2 bg-white rounded border border-gray-200 text-center text-gray-600">涵盖主流语言</div>
-        <div class="p-2 bg-white rounded border border-gray-200 text-center text-gray-600">映射不同项目语言</div>
-        <div class="p-2 bg-white rounded border border-gray-200 text-center text-gray-600">业务站与过审站语言兼容</div>
-        <div class="p-2 bg-white rounded border border-gray-200 text-center text-gray-600">模板语言支持</div>
-        <div class="p-2 bg-white rounded border border-gray-200 text-center text-gray-600">套餐语言支持</div>
-        <div class="p-2 bg-white rounded border border-gray-200 text-center text-gray-600">轻量化加载语言文件</div>
+        <div class="flex items-start gap-2"><span class="text-[#00A896]">✓</span><span>参与跨部门需求评审，澄清需求范围</span></div>
+        <div class="flex items-start gap-2"><span class="text-[#00A896]">✓</span><span>从前端角度识别风险并提前反馈</span></div>
+        <div class="flex items-start gap-2"><span class="text-[#00A896]">✓</span><span>多项目并行时，协调优先级保障交付</span></div>
       </div>
     </div>
   </div>
 
   <div>
-    <div class="p-4 bg-gray-50 rounded-lg mb-4">
-      <div class="font-semibold text-gray-800 mb-3">📋 完成事项</div>
-      <div class="space-y-2 text-sm text-gray-600">
-        <div class="flex items-start gap-2"><span class="text-[#00A896]">✓</span><span>多语言版本更新，使页面加载更快加载内容提炼</span></div>
-        <div class="flex items-start gap-2"><span class="text-[#00A896]">✓</span><span>海外站点内容展示调整，避免文案信息缺失</span></div>
-        <div class="flex items-start gap-2"><span class="text-[#00A896]">✓</span><span>支付相关公司信息、账号信息补充与修正</span></div>
+    <div class="p-4 bg-gray-50 rounded-lg mb-3">
+      <div class="font-semibold text-gray-800 mb-2">海外站点与多语言</div>
+      <div class="grid grid-cols-2 gap-2 text-xs text-gray-600">
+        <div class="p-2 bg-white rounded border border-gray-200 text-center">涵盖主流语言</div>
+        <div class="p-2 bg-white rounded border border-gray-200 text-center">映射不同项目语言</div>
+        <div class="p-2 bg-white rounded border border-gray-200 text-center">业务站与过审站兼容</div>
+        <div class="p-2 bg-white rounded border border-gray-200 text-center">轻量化加载语言文件</div>
+      </div>
+    </div>
+    <div class="p-4 bg-gray-50 rounded-lg mb-3">
+      <div class="font-semibold text-gray-800 mb-2">海外完成事项</div>
+      <div class="space-y-1 text-sm text-gray-600">
+        <div class="flex items-start gap-2"><span class="text-[#00A896]">✓</span><span>多语言版本更新，页面加载内容优化</span></div>
+        <div class="flex items-start gap-2"><span class="text-[#00A896]">✓</span><span>支付相关公司信息、账号信息补充</span></div>
         <div class="flex items-start gap-2"><span class="text-[#00A896]">✓</span><span>SEO 与合规相关页面结构调整</span></div>
       </div>
     </div>
-    <div class="p-4 border-2 border-[#00A896] rounded-lg">
-      <div class="font-semibold text-[#00A896] mb-2">📈 产出效果</div>
-      <div class="space-y-1 text-sm text-gray-600">
-        <div>• 海外站点稳定性与一致性提升</div>
-        <div>• 多语言用户支付体验得到保障</div>
-        <div>• 降低因前端展示问题带来的业务风险</div>
-      </div>
+    <div class="p-3 border-2 border-[#00A896] rounded-lg">
+      <div class="font-semibold text-[#00A896] text-sm mb-1">产出效果</div>
+      <div class="text-xs text-gray-600">跨团队沟通成本降低，海外站点稳定性提升</div>
     </div>
   </div>
 </div>
 
 ---
 
-<div class="flex items-center gap-4 mb-4">
-  <div class="w-2 h-8 bg-[#00A896]"></div>
-  <div class="text-3xl font-bold text-gray-800">三、工作内容详细拆解</div>
+<div class="flex items-center gap-4 mb-6 mt-4">
+  <div class="px-3 py-1 bg-[#00A896] text-white rounded font-bold">A</div>
+  <div class="text-3xl font-bold text-gray-800">业绩回顾 - 统一管理后台建设</div>
 </div>
 
-<div class="text-lg text-[#00A896] font-semibold mb-3">5. 统一管理后台与平台能力建设 <span class="text-sm text-gray-400 font-normal">（支撑型工作 · 基础能力建设）</span></div>
-
-<div class="grid grid-cols-2 gap-6">
+<div class="grid grid-cols-2 gap-5">
   <div>
-    <div class="p-4 bg-[#00A896]/10 rounded-lg mb-4">
+    <div class="p-4 bg-[#00A896]/10 rounded-lg mb-3">
       <div class="text-gray-700 text-sm leading-relaxed">
         下半年持续参与统一管理后台相关需求，虽为公司内部使用，但对<span class="font-semibold">整体业务运转影响较大</span>，是支撑业务与运营的基础能力建设。
       </div>
     </div>
     <div class="p-4 bg-gray-50 rounded-lg">
-      <div class="font-semibold text-gray-800 mb-3">⚙️ 功能模块</div>
-      <div class="grid grid-cols-2 gap-2 text-sm">
+      <div class="font-semibold text-gray-800 mb-3">功能模块</div>
+      <div class="grid grid-cols-3 gap-2 text-xs">
         <div class="p-2 bg-white rounded border border-gray-200 text-center text-gray-600">支付账号管理</div>
         <div class="p-2 bg-white rounded border border-gray-200 text-center text-gray-600">支付渠道配置</div>
         <div class="p-2 bg-white rounded border border-gray-200 text-center text-gray-600">路由配置</div>
@@ -426,9 +385,9 @@ mdc: true
   </div>
 
   <div>
-    <div class="p-4 bg-gray-50 rounded-lg mb-4">
-      <div class="font-semibold text-gray-800 mb-3">📋 完成事项</div>
-      <div class="space-y-2 text-sm text-gray-600">
+    <div class="p-4 bg-gray-50 rounded-lg mb-3">
+      <div class="font-semibold text-gray-800 mb-2">完成事项</div>
+      <div class="space-y-1 text-sm text-gray-600">
         <div class="flex items-start gap-2"><span class="text-[#00A896]">✓</span><span>支付账号、渠道、路由配置功能开发与维护</span></div>
         <div class="flex items-start gap-2"><span class="text-[#00A896]">✓</span><span>订单查询、退款等业务功能支持</span></div>
         <div class="flex items-start gap-2"><span class="text-[#00A896]">✓</span><span>后台列表、筛选、输入校验体验优化</span></div>
@@ -436,7 +395,7 @@ mdc: true
       </div>
     </div>
     <div class="p-4 border-2 border-[#00A896] rounded-lg">
-      <div class="font-semibold text-[#00A896] mb-2">📈 产出效果</div>
+      <div class="font-semibold text-[#00A896] mb-2">产出效果</div>
       <div class="space-y-1 text-sm text-gray-600">
         <div>• 提升运营与客服处理效率</div>
         <div>• 降低后台使用成本与出错概率</div>
@@ -447,93 +406,146 @@ mdc: true
 </div>
 
 ---
+layout: section
+---
 
-<div class="flex items-center gap-4 mb-6">
-  <div class="w-2 h-8 bg-[#00A896]"></div>
-  <div class="text-3xl font-bold text-gray-800">四、能力体现与岗位价值</div>
-  <div class="text-sm text-gray-400 ml-2">技术 · 业务 · 协作</div>
+<div class="text-center">
+  <div class="text-6xl font-bold text-[#00A896] mb-4">B</div>
+  <div class="text-4xl font-bold text-gray-800">成长回顾</div>
+  <div class="text-xl text-gray-500 mt-4">能力提升与经验积累</div>
 </div>
 
-<div class="grid grid-cols-3 gap-5">
-  <div class="p-5 border-2 border-[#00A896] rounded-lg">
-    <div class="flex items-center gap-2 mb-4">
-      <div class="w-10 h-10 rounded-lg bg-[#00A896]/10 flex items-center justify-center text-xl">🛠️</div>
-      <div class="text-xl font-bold text-[#00A896]">技术能力</div>
+---
+
+<div class="flex items-center gap-4 mb-6 mt-4">
+  <div class="px-3 py-1 bg-[#00A896] text-white rounded font-bold">B</div>
+  <div class="text-3xl font-bold text-gray-800">成长回顾 - 能力体现与岗位价值</div>
+</div>
+
+<div class="grid grid-cols-3 gap-4 mb-4">
+  <div class="p-4 border-2 border-[#00A896] rounded-lg">
+    <div class="flex items-center gap-2 mb-3">
+      <div class="text-lg font-bold text-[#00A896]">技术能力</div>
     </div>
-    <div class="space-y-3 text-sm text-gray-600">
-      <div class="flex items-start gap-2">
-        <span class="text-[#00A896]">•</span>
-        <span>熟悉复杂支付流程与高风险场景的前端实现</span>
+    <div class="space-y-2 text-sm text-gray-600">
+      <div class="flex items-start gap-2"><span class="text-[#00A896]">•</span><span>熟悉复杂支付流程与高风险场景实现</span></div>
+      <div class="flex items-start gap-2"><span class="text-[#00A896]">•</span><span>能处理 iframe、跨域、支付跳转等问题</span></div>
+      <div class="flex items-start gap-2"><span class="text-[#00A896]">•</span><span>对多语言、模板系统有成熟经验</span></div>
+    </div>
+  </div>
+
+  <div class="p-4 border-2 border-[#00A896] rounded-lg">
+    <div class="flex items-center gap-2 mb-3">
+      <div class="text-lg font-bold text-[#00A896]">业务理解</div>
+    </div>
+    <div class="space-y-2 text-sm text-gray-600">
+      <div class="flex items-start gap-2"><span class="text-[#00A896]">•</span><span>理解支付转化、套餐展示对用户决策的影响</span></div>
+      <div class="flex items-start gap-2"><span class="text-[#00A896]">•</span><span>能基于业务目标主动优化交互方案</span></div>
+      <div class="flex items-start gap-2"><span class="text-[#00A896]">•</span><span>出现bug时第一时间排查与修复</span></div>
+    </div>
+  </div>
+
+  <div class="p-4 border-2 border-[#00A896] rounded-lg">
+    <div class="flex items-center gap-2 mb-3">
+      <div class="text-lg font-bold text-[#00A896]">协作责任</div>
+    </div>
+    <div class="space-y-2 text-sm text-gray-600">
+      <div class="flex items-start gap-2"><span class="text-[#00A896]">•</span><span>高频对接产品、支付、海外运营团队</span></div>
+      <div class="flex items-start gap-2"><span class="text-[#00A896]">•</span><span>多次承担高优先级与紧急需求</span></div>
+      <div class="flex items-start gap-2"><span class="text-[#00A896]">•</span><span>主动处理历史遗留问题保障系统稳定</span></div>
+    </div>
+</div>
+</div>
+
+<div class="grid grid-cols-3 gap-4">
+  <div class="p-4 border-2 border-[#00A896] rounded-lg">
+    <div class="font-semibold text-gray-800 mb-2">知识积累</div>
+    <div class="space-y-1 text-sm text-gray-600">
+      <div class="flex items-start gap-2"><span class="text-[#00A896]">•</span><span>深入理解多种支付渠道接入流程</span></div>
+      <div class="flex items-start gap-2"><span class="text-[#00A896]">•</span><span>掌握海外支付合规与本地化适配</span></div>
+      <div class="flex items-start gap-2"><span class="text-[#00A896]">•</span><span>形成支付异常排查的系统性方法</span></div>
+    </div>
+  </div>
+  <div class="p-4 border-2 border-[#00A896] rounded-lg">
+    <div class="font-semibold text-gray-800 mb-2">能力突破</div>
+    <div class="space-y-1 text-sm text-gray-600">
+      <div class="flex items-start gap-2"><span class="text-[#00A896]">•</span><span>从单一执行者成长为跨部门对接人</span></div>
+      <div class="flex items-start gap-2"><span class="text-[#00A896]">•</span><span>能独立承担高优先级、高风险需求</span></div>
+      <div class="flex items-start gap-2"><span class="text-[#00A896]">•</span><span>多项目并行时保持稳定交付节奏</span></div>
+    </div>
+  </div>
+  <div class="p-4 border-2 border-[#00A896] rounded-lg">
+    <div class="font-semibold text-[#00A896] mb-2">成长关键词</div>
+    <div class="flex flex-wrap gap-1">
+      <span class="px-2 py-1 bg-[#00A896]/10 rounded-full text-xs text-[#00A896]">支付专业化</span>
+      <span class="px-2 py-1 bg-[#00A896]/10 rounded-full text-xs text-[#00A896]">跨部门协作</span>
+      <span class="px-2 py-1 bg-[#00A896]/10 rounded-full text-xs text-[#00A896]">业务思维</span>
+      <span class="px-2 py-1 bg-[#00A896]/10 rounded-full text-xs text-[#00A896]">风险意识</span>
+      <span class="px-2 py-1 bg-[#00A896]/10 rounded-full text-xs text-[#00A896]">稳定交付</span>
+    </div>
+  </div>
+</div>
+
+---
+layout: section
+---
+
+<div class="text-center">
+  <div class="text-6xl font-bold text-[#00A896] mb-4">C</div>
+  <div class="text-4xl font-bold text-gray-800">感受与建议</div>
+  <div class="text-xl text-gray-500 mt-4">工作感悟与思考</div>
+</div>
+
+---
+
+<div class="flex items-center gap-4 mb-6 mt-4">
+  <div class="px-3 py-1 bg-[#00A896] text-white rounded font-bold">C</div>
+  <div class="text-3xl font-bold text-gray-800">感受与建议 - 年度工作感悟</div>
+</div>
+
+<div class="grid grid-cols-2 gap-5">
+  <div>
+    <div class="p-4 bg-[#00A896]/10 rounded-lg mb-3">
+      <div class="font-semibold text-gray-800 mb-2">工作感悟</div>
+      <div class="text-sm text-gray-700 leading-relaxed">
+        在支付领域的深耕，让我体会到<span class="text-[#00A896] font-semibold">支付业务的复杂性与重要性</span>。在多项目并行的压力下，学会了<span class="text-[#00A896] font-semibold">合理安排优先级</span>，也逐渐从被动接收需求成长为能够<span class="text-[#00A896] font-semibold">主动思考业务问题</span>的参与者。
       </div>
-      <div class="flex items-start gap-2">
-        <span class="text-[#00A896]">•</span>
-        <span>能处理 iframe、跨域、支付跳转等复杂问题</span>
-      </div>
-      <div class="flex items-start gap-2">
-        <span class="text-[#00A896]">•</span>
-        <span>对多语言、模板系统、复杂表单有成熟经验</span>
-      </div>
-        <div class="flex items-start gap-2">
-        <span class="text-[#00A896]">•</span>
-        <span>应对未接触支付，能提前感知所做内容</span>
+    </div>
+    <div class="p-4 bg-gray-50 rounded-lg">
+      <div class="font-semibold text-gray-800 mb-3">收获与成就</div>
+      <div class="space-y-3 text-sm text-gray-600">
+        <div class="flex items-start gap-2"><span class="text-[#00A896]">✓</span><span>成为支付前端领域的可靠交付者</span></div>
+        <div class="flex items-start gap-2"><span class="text-[#00A896]">✓</span><span>建立了与多个部门的良好协作关系</span></div>
+        <div class="flex items-start gap-2"><span class="text-[#00A896]">✓</span><span>积累了丰富的支付渠道对接经验</span></div>
+        <div class="flex items-start gap-2"><span class="text-[#00A896]">✓</span><span>在高压环境下保持稳定的交付质量</span></div>
       </div>
     </div>
   </div>
 
-  <div class="p-5 border-2 border-[#00A896] rounded-lg">
-    <div class="flex items-center gap-2 mb-4">
-      <div class="w-10 h-10 rounded-lg bg-[#00A896]/10 flex items-center justify-center text-xl">💡</div>
-      <div class="text-xl font-bold text-[#00A896]">业务理解</div>
-    </div>
-    <div class="space-y-3 text-sm text-gray-600">
-      <div class="flex items-start gap-2">
-        <span class="text-[#00A896]">•</span>
-        <span>理解支付转化、套餐展示、文案对用户决策的影响</span>
-      </div>
-      <div class="flex items-start gap-2">
-        <span class="text-[#00A896]">•</span>
-        <span>能基于业务目标主动优化交互与展示方案</span>
-      </div>
-      <div class="flex items-start gap-2">
-        <span class="text-[#00A896]">•</span>
-        <span>不局限于需求实现，关注实际业务效果</span>
-      </div>
-      <div class="flex items-start gap-2">
-        <span class="text-[#00A896]">•</span>
-        <span>出现bug时，能做到第一时间排查与修复</span>
-      </div>
-      <div class="flex items-start gap-2">
-        <span class="text-[#00A896]">•</span>
-        <span>针对业务需求范围，能主观预测对接支付可能遇到的困难与挑战</span>
+  <div>
+    <div class="p-4 bg-gray-50 rounded-lg mb-3">
+      <div class="font-semibold text-gray-800 mb-2">挑战与应对</div>
+      <div class="space-y-2 text-sm text-gray-600">
+        <div class="p-2 bg-white rounded border-l-3 border-[#00A896]">
+          <div class="font-medium text-gray-800 text-xs">多项目并行时间紧张</div>
+          <div class="text-gray-500 text-xs">建立优先级意识，及时同步进度</div>
+        </div>
+        <div class="p-2 bg-white rounded border-l-3 border-[#00A896]">
+          <div class="font-medium text-gray-800 text-xs">新支付渠道文档不完善</div>
+          <div class="text-gray-500 text-xs">主动与渠道方技术沟通</div>
+        </div>
+        <div class="p-2 bg-white rounded border-l-3 border-[#00A896]">
+          <div class="font-medium text-gray-800 text-xs">历史代码复杂难以维护</div>
+          <div class="text-gray-500 text-xs">在需求中逐步重构优化</div>
+        </div>
       </div>
     </div>
-  </div>
-
-  <div class="p-5 border-2 border-[#00A896] rounded-lg">
-    <div class="flex items-center gap-2 mb-4">
-      <div class="w-10 h-10 rounded-lg bg-[#00A896]/10 flex items-center justify-center text-xl">🤝</div>
-      <div class="text-xl font-bold text-[#00A896]">协作与责任感</div>
-    </div>
-    <div class="space-y-3 text-sm text-gray-600">
-      <div class="flex items-start gap-2">
-        <span class="text-[#00A896]">•</span>
-        <span>高频对接产品、支付、海外运营团队</span>
-      </div>
-      <div class="flex items-start gap-2">
-        <span class="text-[#00A896]">•</span>
-        <span>多次承担高优先级与紧急需求</span>
-      </div>
-      <div class="flex items-start gap-2">
-        <span class="text-[#00A896]">•</span>
-        <span>主动处理历史遗留问题，保障系统稳定</span>
-      </div>
-      <div class="flex items-start gap-2">
-        <span class="text-[#00A896]">•</span>
-        <span>对接其他同事，做到前后端链路思考，划清需求范围</span>
-      </div>
-        <div class="flex items-start gap-2">
-        <span class="text-[#00A896]">•</span>
-        <span>新渠道接入时遇到困难，主动与渠道方技术进行沟通避免需求进度卡死</span>
+    <div class="p-4 border-2 border-[#00A896] rounded-lg">
+      <div class="font-semibold text-[#00A896] mb-2">自我反思</div>
+      <div class="space-y-1 text-sm text-gray-600">
+        <div class="flex items-center gap-2"><span class="text-[#00A896]">•</span><span>需进一步提升技术文档的沉淀意识</span></div>
+        <div class="flex items-center gap-2"><span class="text-[#00A896]">•</span><span>时间紧张时可以更早地同步风险</span></div>
+        <div class="flex items-center gap-2"><span class="text-[#00A896]">•</span><span>对支付数据分析的关注可再加强</span></div>
       </div>
     </div>
   </div>
@@ -541,104 +553,131 @@ mdc: true
 
 ---
 
-<div class="flex items-center gap-4 mb-6">
-  <div class="w-2 h-8 bg-[#00A896]"></div>
-  <div class="text-3xl font-bold text-gray-800">五、年度自我评价</div>
-  <div class="text-sm text-gray-400 ml-2">绩效总结</div>
+<div class="flex items-center gap-4 mb-6 mt-4">
+  <div class="px-3 py-1 bg-[#00A896] text-white rounded font-bold">C</div>
+  <div class="text-3xl font-bold text-gray-800">感受与建议 - 改进建议</div>
 </div>
 
-<div class="p-6 bg-gray-50 rounded-lg border-l-4 border-[#00A896] mb-6">
-  <div class="text-lg leading-relaxed text-gray-700">
-    在担任前端开发岗位一职，在完成大量日常需求交付的同时，持续承担
-    <span class="text-[#00A896] font-semibold">支付与收银台核心链路的建设与优化工作</span>。
+<div class="grid grid-cols-2 gap-4 mb-4">
+  <div>
+    <div class="p-3 bg-gray-50 rounded-lg mb-3">
+      <div class="font-semibold text-gray-800 mb-2">流程优化建议</div>
+      <div class="space-y-1 text-sm text-gray-600">
+        <div class="flex items-start gap-2"><span class="text-[#00A896]">1.</span><span>新支付渠道接入时，提前进行技术评估，预留联调时间</span></div>
+        <div class="flex items-start gap-2"><span class="text-[#00A896]">2.</span><span>高优需求排期时，考虑前端依赖，避免紧急需求堆积</span></div>
+        <div class="flex items-start gap-2"><span class="text-[#00A896]">3.</span><span>支付需求评审时，增加前后端联合评估环节</span></div>
+      </div>
+    </div>
+    <div class="p-3 bg-gray-50 rounded-lg">
+      <div class="font-semibold text-gray-800 mb-2">技术优化建议</div>
+      <div class="space-y-1 text-sm text-gray-600">
+        <div class="flex items-start gap-2"><span class="text-[#00A896]">1.</span><span>建立支付模块的统一错误监控与告警机制</span></div>
+        <div class="flex items-start gap-2"><span class="text-[#00A896]">2.</span><span>推进收银台组件化，提升模板复用率</span></div>
+        <div class="flex items-start gap-2"><span class="text-[#00A896]">3.</span><span>完善支付渠道接入的技术文档与最佳实践</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="p-3 bg-gray-50 rounded-lg mb-3">
+      <div class="font-semibold text-gray-800 mb-2">协作优化建议</div>
+      <div class="space-y-1 text-sm text-gray-600">
+        <div class="flex items-start gap-2"><span class="text-[#00A896]">1.</span><span>建立支付需求的快速沟通通道，缩短响应时间</span></div>
+        <div class="flex items-start gap-2"><span class="text-[#00A896]">2.</span><span>定期进行支付业务知识分享，提升团队认知</span></div>
+        <div class="flex items-start gap-2"><span class="text-[#00A896]">3.</span><span>跨部门对接时，明确各方职责边界与交付标准</span></div>
+        <div class="flex items-start gap-2"><span class="text-[#00A896]">4.</span><span>对接负责人尽可能减少变更，避免影响联调进度</span></div>
+      </div>
+    </div>
+    <div class="p-3 bg-gray-50 rounded-lg">
+      <div class="font-semibold text-gray-800 mb-1">团队反馈</div>
+      <div class="text-sm text-gray-700">从上半年业务开发转到支付部门，对接范围更广，离不开大家的配合与协作。</div>
+    </div>
   </div>
 </div>
 
-<div class="grid grid-cols-4 gap-4 mb-6">
-  <div class="text-center p-4 bg-white rounded-lg border-2 border-[#00A896]">
-    <div class="text-3xl mb-2">📈</div>
-    <div class="font-semibold text-[#00A896]">支付稳定性</div>
-    <div class="text-xs text-gray-500 mt-1">核心链路保障</div>
-  </div>
-  <div class="text-center p-4 bg-white rounded-lg border-2 border-[#00A896]">
-    <div class="text-3xl mb-2">✨</div>
-    <div class="font-semibold text-[#00A896]">用户体验</div>
-    <div class="text-xs text-gray-500 mt-1">交互优化提升</div>
-  </div>
-  <div class="text-center p-4 bg-white rounded-lg border-2 border-[#00A896]">
-    <div class="text-3xl mb-2">🌍</div>
-    <div class="font-semibold text-[#00A896]">多语言支持</div>
-    <div class="text-xs text-gray-500 mt-1">海外业务保障</div>
-  </div>
-  <div class="text-center p-4 bg-white rounded-lg border-2 border-[#00A896]">
-    <div class="text-3xl mb-2">🤖</div>
-    <div class="font-semibold text-[#00A896]">业务部门扩大</div>
-    <div class="text-xs text-gray-500 mt-1">新业务支撑</div>
-  </div>
-</div>
-
-<div class="p-5 border-2 border-[#00A896] rounded-lg">
-  <div class="text-gray-700 leading-relaxed">
-    在以上方面形成了<span class="text-[#00A896] font-semibold">系统性成果</span>，对业务收入与平台稳定运行起到了<span class="text-[#00A896] font-semibold">实际支撑作用</span>。
+<div class="p-4 border-2 border-[#00A896] rounded-lg">
+  <div class="flex items-center justify-between">
+    <div>
+      <div class="font-semibold text-[#00A896] mb-1">个人期望</div>
+      <div class="text-sm text-gray-700">从之前的业务稳定开发，过渡到下半年转入支付部门后，承担了更多核心链路工作，工作范围与职责有所扩展。希望在薪资福利方面能获得相应的认可与调整，以认可和激励我持续为团队创造价值。</div>
+    </div>
   </div>
 </div>
 
 ---
+layout: section
+---
 
-<div class="flex items-center gap-4 mb-6">
-  <div class="w-2 h-8 bg-[#00A896]"></div>
-  <div class="text-3xl font-bold text-gray-800">六、工作展望</div>
-  <div class="text-sm text-gray-400 ml-2">年度工作方向展望</div>
+<div class="text-center">
+  <div class="text-6xl font-bold text-[#00A896] mb-4">D</div>
+  <div class="text-4xl font-bold text-gray-800">未来规划</div>
+  <div class="text-xl text-gray-500 mt-4">工作展望与目标</div>
+  </div>
+
+---
+
+<div class="flex items-center gap-4 mb-6 mt-4">
+  <div class="px-3 py-1 bg-[#00A896] text-white rounded font-bold">D</div>
+  <div class="text-3xl font-bold text-gray-800">未来规划 - 业务方向与个人成长</div>
 </div>
 
-<div class="grid grid-cols-3 gap-6">
-  <div class="p-5 border-2 border-[#00A896] rounded-lg">
-    <div class="w-14 h-14 mx-auto rounded-lg bg-[#00A896]/10 flex items-center justify-center text-3xl mb-4">
-      💳
-    </div>
-    <div class="text-lg font-bold text-gray-800 text-center mb-3">支付转化优化</div>
-    <div class="text-gray-500 text-sm text-center mb-4">
-      持续优化支付与收银台转化率，提升核心收入指标
-    </div>
-    <div class="space-y-2 text-xs text-gray-600">
-      <div class="flex items-center gap-1"><span class="text-[#00A896]">→</span> 支付流程简化</div>
-      <div class="flex items-center gap-1"><span class="text-[#00A896]">→</span> 转化漏斗分析</div>
-      <div class="flex items-center gap-1"><span class="text-[#00A896]">→</span> A/B 测试优化</div>
-      <div class="flex items-center gap-1"><span class="text-[#00A896]">→</span> 不同模板优化</div>
-      <div class="flex items-center gap-1"><span class="text-[#00A896]">→</span> 渠道对接优化</div>
+<div class="grid grid-cols-3 gap-4 mb-4">
+  <div class="p-4 border-2 border-[#00A896] rounded-lg">
+    <div class="w-10 h-10 mx-auto rounded-lg bg-[#00A896]/10 flex items-center justify-center text-2xl mb-2">💳</div>
+    <div class="text-base font-bold text-gray-800 text-center mb-2">支付转化优化</div>
+    <div class="space-y-1 text-xs text-gray-600">
+      <div class="flex items-center gap-1"><span class="text-[#00A896]">•</span> 支付流程简化</div>
+      <div class="flex items-center gap-1"><span class="text-[#00A896]">•</span> 转化漏斗分析</div>
+      <div class="flex items-center gap-1"><span class="text-[#00A896]">•</span> A/B 测试优化</div>
+      <div class="flex items-center gap-1"><span class="text-[#00A896]">•</span> 渠道对接优化</div>
     </div>
   </div>
 
-  <div class="p-5 border-2 border-[#00A896] rounded-lg">
-    <div class="w-14 h-14 mx-auto rounded-lg bg-[#00A896]/10 flex items-center justify-center text-3xl mb-4">
-      🧩
-    </div>
-    <div class="text-lg font-bold text-gray-800 text-center mb-3">模板组件化</div>
-    <div class="text-gray-500 text-sm text-center mb-4">
-      推进收银台模板进一步组件化与标准化
-    </div>
-    <div class="space-y-2 text-xs text-gray-600">
-      <div class="flex items-center gap-1"><span class="text-[#00A896]">→</span> 组件库建设</div>
-      <div class="flex items-center gap-1"><span class="text-[#00A896]">→</span> 配置化能力</div>
-      <div class="flex items-center gap-1"><span class="text-[#00A896]">→</span> 降低维护成本</div>
-      <div class="flex items-center gap-1"><span class="text-[#00A896]">→</span> 多语言模板化</div>
-      <div class="flex items-center gap-1"><span class="text-[#00A896]">→</span> 支付方式动态化</div>
-      <div class="flex items-center gap-1"><span class="text-[#00A896]">→</span> 套餐周期匹配更合理</div>
+  <div class="p-4 border-2 border-[#00A896] rounded-lg">
+    <div class="w-10 h-10 mx-auto rounded-lg bg-[#00A896]/10 flex items-center justify-center text-2xl mb-2">🧩</div>
+    <div class="text-base font-bold text-gray-800 text-center mb-2">模板组件化</div>
+    <div class="space-y-1 text-xs text-gray-600">
+      <div class="flex items-center gap-1"><span class="text-[#00A896]">•</span> 组件库建设</div>
+      <div class="flex items-center gap-1"><span class="text-[#00A896]">•</span> 配置化能力</div>
+      <div class="flex items-center gap-1"><span class="text-[#00A896]">•</span> 降低维护成本</div>
+      <div class="flex items-center gap-1"><span class="text-[#00A896]">•</span> 逻辑结构优化</div>
     </div>
   </div>
 
-  <div class="p-5 border-2 border-[#00A896] rounded-lg">
-    <div class="w-14 h-14 mx-auto rounded-lg bg-[#00A896]/10 flex items-center justify-center text-3xl mb-4">
-      🚀
+  <div class="p-4 border-2 border-[#00A896] rounded-lg">
+    <div class="w-10 h-10 mx-auto rounded-lg bg-[#00A896]/10 flex items-center justify-center text-2xl mb-2">🚀</div>
+    <div class="text-base font-bold text-gray-800 text-center mb-2">多部门协同</div>
+    <div class="space-y-1 text-xs text-gray-600">
+      <div class="flex items-center gap-1"><span class="text-[#00A896]">•</span> AI与海外支付优化</div>
+      <div class="flex items-center gap-1"><span class="text-[#00A896]">•</span> 新项目支付适配</div>
+      <div class="flex items-center gap-1"><span class="text-[#00A896]">•</span> 多维度对接优化</div>
     </div>
-    <div class="text-lg font-bold text-gray-800 text-center mb-3">多部门协同</div>
-    <div class="text-gray-500 text-sm text-center mb-4">
-      深度参与 AI业务与海外业务涉及的需求
+  </div>
+</div>
+
+<div class="grid grid-cols-3 gap-4">
+  <div class="p-4 border-2 border-[#00A896] rounded-lg">
+    <div class="font-semibold text-gray-800 mb-2">技术深耕</div>
+    <div class="space-y-1 text-sm text-gray-600">
+      <div class="flex items-start gap-2"><span class="text-[#00A896]">•</span><span>学习支付安全与风控知识</span></div>
+      <div class="flex items-start gap-2"><span class="text-[#00A896]">•</span><span>前端性能优化在支付场景的应用</span></div>
+      <div class="flex items-start gap-2"><span class="text-[#00A896]">•</span><span>提升代码质量与架构设计能力</span></div>
     </div>
-    <div class="space-y-2 text-xs text-gray-600">
-      <div class="flex items-center gap-1"><span class="text-[#00A896]">→</span> AI产品支付与维护试点</div>
-      <div class="flex items-center gap-1"><span class="text-[#00A896]">→</span> 海外新项目适配支付</div>
-      <div class="flex items-center gap-1"><span class="text-[#00A896]">→</span> 涉及支付新方案的优化与落地</div>
+  </div>
+  <div class="p-4 border-2 border-[#00A896] rounded-lg">
+    <div class="font-semibold text-gray-800 mb-2">团队贡献</div>
+    <div class="space-y-1 text-sm text-gray-600">
+      <div class="flex items-start gap-2"><span class="text-[#00A896]">•</span><span>分享支付领域的经验与最佳实践</span></div>
+      <div class="flex items-start gap-2"><span class="text-[#00A896]">•</span><span>协助新同事熟悉支付业务流程</span></div>
+      <div class="flex items-start gap-2"><span class="text-[#00A896]">•</span><span>推动技术文档与知识库建设</span></div>
+    </div>
+  </div>
+  <div class="p-4 border-2 border-[#00A896] rounded-lg">
+    <div class="font-semibold text-[#00A896] mb-2">年度目标</div>
+    <div class="space-y-1 text-sm text-gray-700">
+      <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-[#00A896]"></span><span>成为支付前端领域的技术专家</span></div>
+      <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-[#00A896]"></span><span>保持高质量、稳定的需求交付</span></div>
+      <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-[#00A896]"></span><span>为团队和公司创造更大价值</span></div>
     </div>
   </div>
 </div>
@@ -650,12 +689,6 @@ class: text-center
 <div class="h-full flex flex-col justify-center items-center">
   <div class="text-5xl font-bold text-[#00A896]">感谢聆听</div>
   <div class="text-2xl text-gray-600 mt-4">前端开发工程师 · 谢辉</div>
-
-  <div class="mt-10 p-6 bg-gray-50 rounded-lg max-w-2xl">
-    <div class="text-gray-600 text-sm leading-relaxed">
-      2025 年全年，围绕<span class="text-[#00A896] font-semibold">支付与收银台核心链路</span>持续投入，保障了业务收入与平台稳定运行。<br>
-      期待在未来继续针对支付创造更大价值。
-    </div>
-  </div>
-  <div class="mt-10 text-gray-400">2025.12</div>
+  <div class="mt-10 text-gray-400">2025.12.18</div>
 </div>
+

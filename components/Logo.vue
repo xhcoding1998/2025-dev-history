@@ -14,11 +14,10 @@
   left: 0;
   z-index: 100;
   padding: 8px 10px;
-  background: white;
 }
 
 .logo-img {
-  height: 24px;
+  height: 32px;
   width: auto;
 }
 </style>

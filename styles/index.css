@@ -1,0 +1,44 @@
+/* 暗色模式全局适配 */
+
+/* 文字颜色 */
+html.dark .text-gray-800 { color: #f3f4f6 !important; }
+html.dark .text-gray-700 { color: #e5e7eb !important; }
+html.dark .text-gray-600 { color: #d1d5db !important; }
+html.dark .text-gray-500 { color: #9ca3af !important; }
+html.dark .text-gray-400 { color: #6b7280 !important; }
+
+/* 背景颜色 */
+html.dark .bg-gray-50 { background-color: #374151 !important; }
+html.dark .bg-white { background-color: #1f2937 !important; }
+
+/* 边框颜色 */
+html.dark .border-gray-200 { border-color: #4b5563 !important; }
+html.dark .border-2 { border-color: #4b5563 !important; }
+
+/* 主题绿色适配 */
+html.dark [class*="border-"][class*="00A896"] { border-color: #00C8B6 !important; }
+html.dark [class*="text-"][class*="00A896"] { color: #00C8B6 !important; }
+html.dark [class*="bg-"][class*="00A896"] { background-color: rgba(0, 200, 182, 0.2) !important; }
+
+/* 边框装饰 */
+html.dark .border-t-4 { border-top-color: #00C8B6 !important; }
+html.dark .border-l-4 { border-left-color: #00C8B6 !important; }
+html.dark .border-l-3 { border-left-color: #00C8B6 !important; }
+
+/* 标签和按钮 */
+html.dark .rounded-full {
+  border-color: #00C8B6 !important;
+  background-color: #1f2937 !important;
+}
+
+/* 卡片内的白色背景 */
+html.dark .p-2.bg-white,
+html.dark div[class*="bg-white"] {
+  background-color: #374151 !important;
+}
+
+/* 确保所有内联的 border 颜色适配 */
+html.dark [style*="border"] {
+  border-color: #4b5563 !important;
+}
+
