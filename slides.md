@@ -123,7 +123,7 @@ html.dark .p-2.bg-white,
   <div class="text-5xl font-bold text-[#00A896]">2025 年度绩效考核总结</div>
   <div class="text-3xl mt-8 text-gray-600">前端开发工程师</div>
   <div class="text-4xl mt-2 font-bold text-gray-800">谢辉</div>
-  <div class="mt-6 text-gray-400">2025.12.18</div>
+  <div class="mt-6 text-gray-400">2025.12.25</div>
 </div>
 
 ---
@@ -134,9 +134,9 @@ html.dark .p-2.bg-white,
     <div class="border-t-4 border-[#00A896] bg-gray-50 p-5 rounded-b-xl shadow-sm hover:shadow-md transition-shadow flex flex-col">
       <div class="text-5xl font-bold text-[#00A896]">A</div>
       <div class="text-xl mt-2 text-gray-800 font-semibold">业绩回顾</div>
-      <div class="text-sm text-gray-500 mt-1">年度工作成果与产出</div>
+      <div class="text-sm text-gray-500 mt-1">核心支付链路稳定性建设</div>
       <div class="mt-4 space-y-1 text-sm text-gray-400">
-        <div>• 工作概述与核心数据</div>
+        <div>• 工作概述与核心成果</div>
         <div>• 支付链路与模板优化</div>
         <div>• 跨部门协作与海外支持</div>
         <div>• 统一管理后台建设</div>
@@ -182,14 +182,14 @@ layout: section
 <div class="text-center">
   <div class="text-6xl font-bold text-[#00A896] mb-4">A</div>
   <div class="text-4xl font-bold text-gray-800">业绩回顾</div>
-  <div class="text-xl text-gray-500 mt-4">年度工作成果与产出</div>
+  <div class="text-xl text-gray-500 mt-4">核心支付链路稳定性建设（年度重点）</div>
 </div>
 
 ---
 
 <div class="flex items-center gap-4 mb-6 mt-4">
   <div class="px-3 py-1 bg-[#00A896] text-white rounded font-bold">A</div>
-  <div class="text-3xl font-bold text-gray-800">业绩回顾 - 年度工作概述</div>
+  <div class="text-3xl font-bold text-gray-800">业绩回顾 - 年度核心成果</div>
 </div>
 
 <div class="p-4 bg-[#00A896]/10 rounded-lg mb-10">
@@ -205,19 +205,19 @@ layout: section
     <div class="text-xs text-gray-400">全年累计交付</div>
   </div>
   <div class="text-center p-3 border-2 border-[#00A896] rounded-lg">
-    <div class="text-3xl font-bold text-[#00A896]">50%+</div>
-    <div class="text-gray-600 text-sm font-medium">High 优先级</div>
-    <div class="text-xs text-gray-400">需求占比</div>
-  </div>
-  <div class="text-center p-3 border-2 border-[#00A896] rounded-lg">
     <div class="text-3xl font-bold text-[#00A896]">30+</div>
     <div class="text-gray-600 text-sm font-medium">支付方式</div>
-    <div class="text-xs text-gray-400">多国家覆盖</div>
+    <div class="text-xs text-gray-400">多国家渠道覆盖</div>
   </div>
   <div class="text-center p-3 border-2 border-[#00A896] rounded-lg">
-    <div class="text-3xl font-bold text-[#00A896]">12</div>
-    <div class="text-gray-600 text-sm font-medium">个月</div>
-    <div class="text-xs text-gray-400">稳定交付</div>
+    <div class="text-3xl font-bold text-[#00A896]"><3</div>
+    <div class="text-gray-600 text-sm font-medium">前端线上事故</div>
+    <div class="text-xs text-gray-400">核心链路稳定保障</div>
+  </div>
+  <div class="text-center p-3 border-2 border-[#00A896] rounded-lg">
+    <div class="text-3xl font-bold text-[#00A896]">↓</div>
+    <div class="text-gray-600 text-sm font-medium">模板回归问题</div>
+    <div class="text-xs text-gray-400">结构优化后明显减少</div>
   </div>
 </div>
 
@@ -260,16 +260,16 @@ layout: section
       </div>
     </div>
     <div class="p-4 bg-gray-50 rounded-lg mb-3">
-      <div class="font-semibold text-gray-800 mb-2">流程优化</div>
+      <div class="font-semibold text-gray-800 mb-2">架构与方案设计</div>
       <div class="space-y-1 text-sm text-gray-600">
-        <div class="flex items-start gap-2"><span class="text-[#00A896]">✓</span><span>支付流程梳理与异常兜底</span></div>
-        <div class="flex items-start gap-2"><span class="text-[#00A896]">✓</span><span>修复失败回跳、状态异常等问题</span></div>
-        <div class="flex items-start gap-2"><span class="text-[#00A896]">✓</span><span>IFRAME、跳转链路与回调逻辑优化</span></div>
+        <div class="flex items-start gap-2"><span class="text-[#00A896]">✓</span><span>多支付形态(iframe/redirect/SDK)统一状态管理</span></div>
+        <div class="flex items-start gap-2"><span class="text-[#00A896]">✓</span><span>异常支付回调的前端兜底策略设计</span></div>
+        <div class="flex items-start gap-2"><span class="text-[#00A896]">✓</span><span>支付失败回跳与状态同步机制优化</span></div>
       </div>
     </div>
     <div class="p-3 border-2 border-[#00A896] rounded-lg">
       <div class="font-semibold text-[#00A896] text-sm mb-1">产出效果</div>
-      <div class="text-xs text-gray-600">核心支付流程更稳定，海外支付切换成本降低</div>
+      <div class="text-xs text-gray-600">支付异常处理机制完善，渠道切换成本显著降低</div>
     </div>
   </div>
 
@@ -295,7 +295,7 @@ layout: section
     </div>
     <div class="p-3 border-2 border-[#00A896] rounded-lg">
       <div class="font-semibold text-[#00A896] text-sm mb-1">产出效果</div>
-      <div class="text-xs text-gray-600">模板结构清晰，样式问题减少，回归成本降低</div>
+      <div class="text-xs text-gray-600">模板回归问题明显减少，新需求开发效率提升</div>
     </div>
   </div>
 </div>
@@ -334,7 +334,7 @@ layout: section
 
   <div>
     <div class="p-4 bg-gray-50 rounded-lg mb-3">
-      <div class="font-semibold text-gray-800 mb-2">海外站点与多语言</div>
+      <div class="font-semibold text-gray-800 mb-2">业务站点与多语言</div>
       <div class="grid grid-cols-2 gap-2 text-xs text-gray-600">
         <div class="p-2 bg-white rounded border border-gray-200 text-center">涵盖主流语言</div>
         <div class="p-2 bg-white rounded border border-gray-200 text-center">映射不同项目语言</div>
@@ -343,7 +343,7 @@ layout: section
       </div>
     </div>
     <div class="p-4 bg-gray-50 rounded-lg mb-3">
-      <div class="font-semibold text-gray-800 mb-2">海外完成事项</div>
+      <div class="font-semibold text-gray-800 mb-2">完成事项</div>
       <div class="space-y-1 text-sm text-gray-600">
         <div class="flex items-start gap-2"><span class="text-[#00A896]">✓</span><span>多语言版本更新，页面加载内容优化</span></div>
         <div class="flex items-start gap-2"><span class="text-[#00A896]">✓</span><span>支付相关公司信息、账号信息补充</span></div>
@@ -352,7 +352,7 @@ layout: section
     </div>
     <div class="p-3 border-2 border-[#00A896] rounded-lg">
       <div class="font-semibold text-[#00A896] text-sm mb-1">产出效果</div>
-      <div class="text-xs text-gray-600">跨团队沟通成本降低，海外站点稳定性提升</div>
+      <div class="text-xs text-gray-600">支付接入周期可预期，跨团队协作效率提升</div>
     </div>
   </div>
 </div>
@@ -599,7 +599,7 @@ layout: section
   <div class="flex items-center justify-between">
     <div>
       <div class="font-semibold text-[#00A896] mb-1">个人期望</div>
-      <div class="text-sm text-gray-700">从之前的业务稳定开发，过渡到下半年转入支付部门后，承担了更多核心链路工作，工作范围与职责有所扩展。希望在薪资福利方面能获得相应的认可与调整，以认可和激励我持续为团队创造价值。</div>
+      <div class="text-sm text-gray-700">从之前的业务稳定开发，过渡到下半年转入支付部门后，承担了更多核心链路工作，工作范围与职责有所扩展。希望在职责扩大、核心链路承担度提升的背景下，能在角色定位与激励机制上获得更匹配的认可。</div>
     </div>
   </div>
 </div>
@@ -675,8 +675,8 @@ layout: section
   <div class="p-4 border-2 border-[#00A896] rounded-lg">
     <div class="font-semibold text-[#00A896] mb-2">年度目标</div>
     <div class="space-y-1 text-sm text-gray-700">
-      <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-[#00A896]"></span><span>成为支付前端领域的技术专家</span></div>
-      <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-[#00A896]"></span><span>保持高质量、稳定的需求交付</span></div>
+      <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-[#00A896]"></span><span>成为支付前端稳定性与架构的核心负责人</span></div>
+      <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-[#00A896]"></span><span>在支付链路决策中提供前端侧技术判断</span></div>
       <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-[#00A896]"></span><span>为团队和公司创造更大价值</span></div>
     </div>
   </div>
@@ -689,6 +689,6 @@ class: text-center
 <div class="h-full flex flex-col justify-center items-center">
   <div class="text-5xl font-bold text-[#00A896]">感谢聆听</div>
   <div class="text-2xl text-gray-600 mt-4">前端开发工程师 · 谢辉</div>
-  <div class="mt-10 text-gray-400">2025.12.18</div>
+  <div class="mt-10 text-gray-400">2025.12.25</div>
 </div>
 
